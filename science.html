@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/cantaloupe.png" />
+    <title>The Cantaloupe | Science</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+            <a href="index.html">
+                <img src="images/cantaloupe_logo.png" alt="" height="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a href="index.html">
+                    <img src="images/cantaloup.png" alt="">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="local.html">Local</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="sports.html" role="button" data-toggle="dropdown">Sports</a>
+                        <div class="dropdown-menu">
+                            <a href="sports.html#soccer" class="dropdown-item">Soccer</a>
+                            <a href="sports.html#basketball" class="dropdown-item">Basketball</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entertainment.html">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="science.html">Science</a>
+                    </li>
+
+                </ul>
+                </div>
+        </nav>
+        </div>
+        <hr>
+        <div class="container">
+            <h1 class="homes">Science</h1>
+            <button  id="setTit">Enlarge Titles</button>
+            <button  id="setTit1">decrease Titles</button>
+            <hr>
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="jumbotron jumbotron-fluid">
+                        <h2 class="science">Monsanto Unveils Chicken Strawberry</h2>
+                        <img  class="img-fluid" src="images/chickSt.jpg" alt="">
+                        <p class="lead">
+                            Evil GMO and pesticide mega corporation Monsanto unveiled it's latest creation today with much fanfare from the GMO loving,
+                            KFC eating public. The announcement of the Chikerberry raises concerns about GMO food and where
+                            the future of the human race lies on a scale of one to nutrition. Touted as two of your 5 a day
+                            in one berry the Chikerberry was created by bonding chicken genes with those of the common strawberry.
+                            Monsanto claims that the new food was created to combat the global food crisis and to bolster
+                            profits for KFC who can now finally compete with the McDonalds McFlurry range with this new combination
+                            of flavours. While the food looks innocent enough and apparently tastes like a crispy strip smothered
+                            in strawberry jam it should be taken into consideration that mixing strawberry juice with chicken
+                            creates a chemical known as avionic acid which is used in chemtrails as a mind control substance.
+                            We encourage our readers to write to their local authorities and demand the immediate banning
+                            of any chicken/strawberry hybrid foods.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="jumbotron jumbotron-fluid">
+                        <h2 class="science">GMO Super Weed Addicting And Mutating Ants</h2>
+                        <video class="failVid" src="videos/weedAnt.mp4" controls></video>
+                        <p>A new form of GMO Super Weed developed by the Mexican Drug Cartels in collaboration with the Illuminati
+                            has had an unexpected effect on ants, which have started mutating to get super-ant strength and
+                            after just one encounter with a marijuana joint have become so addicted that they will use any
+                            means necessary to bring back whatever they can scavenge after humans can't take any more of
+                            the mind bending drugs contained within as documented below. At current mutation rates it's expected
+                            that before the year is out there will be ants the size of Chihuahuas and before the decade is
+                            over these mutant ants will be as big as a horse. I know for a fact that I'd rather fight 100
+                            ant sized horses than 1 horse sized ant, so this doesn't bode well, and one can't even begin
+                            to imagine what this new strain of marijuana is doing to the brains of the people smoking it.
+                            Will we see the rise of Zombie Hippies that will spread pestilence across the nation, ravaging
+                            fast food stores and causing a nationwide snack shortage? Our advice is to stock up on Kit Kats
+                            and Mars Bars now before it's too late..
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                $("#setTit").on("click",(e) => {
+                    $(".science").css("text-shadow","0 0 5px white").css("font-size","+=1pt").css("text-decoration","underline");
+                })
+    
+                $("#setTit1").on("click",(e) => {
+                    $(".science").css({
+                        "font-size": "-=1pt",
+                        // "color": "black",
+                        "text-decoration": "underline"
+                    })
+                })
+            })
+            
+
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <hr>
+</body>
+
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="social">
+                    <a href="https://www.facebook.com/marwan.alalousi" target="_blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/marwanalaloosi/?hl=en" target="_blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marwan-alaloosi-5b3aaa162/" target="_blank">
+                        <i class="fab fa-linkedin fa-3x"></i>
+                    </a>
+                    <h3>&copy;2018 Cantalpoupe</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

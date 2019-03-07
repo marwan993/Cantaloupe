@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/cantaloupe.png" />
+    <title>The Cantaloupe | Home</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger ">
+            <a href="index.html">
+                <img src="images/cantaloupe_logo.png" alt="" height="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a href="index.html">
+                    <img src="images/cantaloup.png" alt="">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="local.html">Local</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="sports.html" role="button" data-toggle="dropdown">Sports</a>
+                        <div class="dropdown-menu">
+                            <a href="sports.html#soccer" class="dropdown-item">Soccer</a>
+                            <a href="sports.html#basketball" class="dropdown-item">Basketball</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entertainment.html">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="science.html">Science</a>
+                    </li>
+
+                </ul>
+                </div>
+        </nav>
+        </div>
+        <hr>
+        <div id="content">
+            <div>
+                <button id="change">Change to Metric</button>
+
+            </div>
+            <h1 id="content2"></h1>
+        </div>
+        <div id="content1"></div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h1 class="home1">Couple grows apart after living together for
+                        <strong> 40 minutes!</strong>
+                    </h1>
+                    <video class="coupleVid" src="videos/couple.mp4" autoplay controls></video>
+                    <p>A COUPLE have grown apart after sharing a home for nearly an hour, it has emerger
+                        <code>Nathan Muir</code> and
+                        <code>Francesca</code>
+                        Ryan have decidedly that, although they still care a lot for each other, things just aren’t like they were when they started
+                        unpacking their stuff earlier today. Muir said: “I’ve got a lot of happy memories of this flat –
+                        opening the door, walking in the kitchen, having a quick slash – but we started having problems when
+                        she got out a collection of Princess Diana thimbles about 20 minutes ago “I was like ‘what the fuck
+                        are those things?’ and she sort of narrowed her eyes and she ‘I thought you’d understand my Princess
+                        of Hearts collectables’.
+                        <br>“We’ve barely spent a night apart over the last two years, but that whole time she was pretending
+                        to be sane.” Ryan said: “Looking back over the fraction of a morning when we were practically married,
+                        I think the rot set in when he decided to start calling the spare room his ‘wank pit’. He acted like
+                        it was a joke but you could tell it wasn’t really. “It is time to move on, but certainly I’ll shedding
+                        some tears as we box up the stuff that we haven’t fully unpacked yet.”</p>
+                    <hr>
+                    <div id="rocket">
+                        <h1 class="home1">Kim Jong Un Offers to Host Peace Talks Between United States and Canada</h1>
+                    </div>
+                    <img id="kim1" src="images/kim.jpg" alt="">
+                </div>
+                <p>
+                    <kbd>Singapore</kbd> (The Borowitz Report)—One day before his summit with Donald J. Trump, the North Korean
+                    dictator, Kim Jong Un, has offered to host peace talks between the United States and Canada. Speaking
+                    to reporters at his hotel in Singapore, Kim said that the rising tensions between the North American
+                    neighbors were posing an “intolerable threat to world peace.” In addition to offering to host U.S.-Canada
+                    talks in Pyongyang, Kim urged the immediate creation of a demilitarized zone along the border separating
+                    the two hostile nations. “In exchange for Canadian Mounties agreeing to stand down on their side of the
+                    border, the United States, in turn, would dismantle its nuclear weapons,” Kim said. Although stating
+                    that “North Korea stands ready and willing to be an honest broker” in peace talks between the two countries,
+                    he urged Trump to dial back the “inflammatory rhetoric” that he aimed at Canadians over the weekend.
+                    “Violent language and threats have no place in international diplomacy,” Kim said.</p>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                const weatherAPI = "http://api.openweathermap.org/data/2.5/weather?";
+    
+                function getJSONData(unit) {
+                    $.getJSON(weatherAPI, {
+                        zip: "75243",
+                        units: unit,
+                        appid: "ad15152c0b8ec0c8649d32ebcb40305e"
+                    }).done((res) => {
+                        $("#content2").text("° "+Math.floor(res.main.temp))
+                    }).fail((textStatus) => {
+                        console.log("Error: " + textStatus);
+                    })
+
+                }
+
+               var fTemp = getJSONData("imperial")
+               console.log(fTemp);
+                // $("#content2").append(fTemp);
+
+                document.querySelector('#change').addEventListener('click', () => {
+                    changeContent();
+                })
+
+
+            const changeContent = () => {
+                var cTemp = getJSONData("metric");
+                $("#content2").text(cTemp);
+            }
+
+                //Date
+                var date = new Date();
+                // console.log(date.toDateString());
+                $("#content1").append(date.toDateString());
+            })
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <hr>
+</body>
+
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="social">
+                    <a href="https://www.facebook.com/marwan.alalousi" target="_blank">
+                        <i class="fab fa-facebook fa-3x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/marwanalaloosi/?hl=en" target="_blank">
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marwan-alaloosi-5b3aaa162/" target="_blank">
+                        <i class="fab fa-linkedin fa-3x"></i>
+                    </a>
+                    <h3>&copy;2018 Cantalpoupe</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</html>
